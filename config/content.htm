@@ -14,6 +14,7 @@
 <h2>Week1</h2>
 <h6><span style="background-color: #ccffff;">Week1</span></h6>
 <p><span style="background-color: #ffff00;">建立個人倉儲cd2021</span></p>
+<p><span style="background-color: #ffff00;"></span></p>
 <p>1.下載kmol2021_spring_v2.7z，完成後開啟。</p>
 <p>2.登入個人github帳號，使用老師的子模組創建新的倉儲cd2021。</p>
 <p>3.進入tmp。</p>
@@ -56,8 +57,10 @@
 <p><span style="background-color: #ffffff;">動機 : <span>進行各班制定組序過程中, 發現即便採用 Ethercalc 以網際協同方式同步讓各班自選組員填入兩兩成組的學員學號, 但仍缺人工或自動定各班組序的有效方案，所以要說明自己認為最有效率的第一階段與訂定組序的方法及流程。</span></span></p>
 <p>使用程式碼 : </p>
 <p>人工 : 在教室前面的其中一台電腦做一個excel表單，並派班代負責key資料，找好組員的人派其中一個代表去報學號，key完後依序排組序下來，這樣不僅不會出錯，組序也不會亂掉。</p>
+<p></p>
 <p><span style="background-color: #ffff00;">繪製零件</span></p>
 <p><span style="background-color: #ffffff;">先在A4白紙設計各個零件尺寸，使用Onshape&amp;Inventor畫出並組合。</span></p>
+<p><span style="background-color: #ffffff;"></span></p>
 <p><span style="background-color: #ffff00;">熟悉CoppeliaSim</span></p>
 <p><span style="background-color: #ffffff;">做一個基本四輪車並以鍵盤控制四輪車</span></p>
 <p><span style="background-color: #ffffff;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/EXIWTk8ZhUU" width="560"></iframe></span></p>
@@ -72,28 +75,48 @@
 <p><span style="background-color: #ffffff;">標題 : 2021-協同產品實習-<span>stage1-ag2</span><br/><span>專題題目 : 飛機起降</span><br/><span>動機 : 對設計路徑類的東西有興趣</span></span></p>
 <p><span style="background-color: #ffffff;"><span>網站 : <a href="https://40623121.github.io/stage1-ag2/content/index.html">分組網站</a></span></span></p>
 <p><span style="background-color: #ffffff;"><span></span></span></p>
-<p><span style="background-color: #ffff00;">加入檔案</span></p>
-<ol>
-<li><span>init.py : </span>其中的 site_title, ip 與 port 可以讓使用者自行修改, site_title 是網站標題, ip 為動態網站啟動時所使用的網路位址, 可設為內部或外部 IPv4 (IPv6), port 則是動態網站啟動時所佔用的埠號</li>
-<li><span>http-server.py : </span>執行後會使用內建的 localhost 與 port 8444 伺服 content 子目錄中的 CMSiMDE 靜態網頁</li>
-<li><span>cms.bat</span><span> :</span> 讓使用者執行動態網站用的批次檔案</li>
-<li><span>acp.bat</span><span> :</span> 若使用者已經將倉儲設為 ssh 連線, 且提供遠端與近端的認證模式, 則可以在執行此批次指令之後加上提交字串, 即可執行 git add ., git commit -m "提交訊息", 以及 git push 等三個指令</li>
-</ol>
+<p><span style="background-color: #ffff00;">分組協同網站同步</span></p>
+<p><span style="background-color: #ffff00;"></span></p>
+<p><span style="background-color: #ffffff;"><span>當 stage1 兩人一組進行協同時, 要讓各組員 Github 帳號下都帶有分組倉儲與分組網站, 則可以透過 git remote add, 設法讓各組員 Github 帳號下的分組網站內容同步</span></span></p>
+<p>操作步驟 : </p>
+<p>1.另一個組員設立一個沒有東西的倉儲(名字需要一樣)</p>
+<p>2.取得子模組資料後，輸入git remote add xxx <a href="/">https://github.com/另一個組員學號/倉儲名稱.git</a></p>
+<p>3.從另一個組員的setting寄從另一個組員的setting &gt; Manage access寄邀請給自己</p>
+<p><span style="background-color: #ffffff;"><span></span></span>4.git push xxx，即完成。</p>
+<p></p>
+<p>遇到的問題 : 推送後顯示 remote: Permission (已解決，尚未從gmail確認對方的invite)</p>
+<p></p>
+<p></p>
+<p><span style="background-color: #ffff00;">update cmsimde</span></p>
+<p>1.<span>init.py : </span>其中的 site_title, ip 與 port 可以讓使用者自行修改, site_title 是網站標題, ip 為動態網站啟動時所使用的網路位址, 可設為內部或外部 IPv4 (IPv6), port 則是動態網站啟動時所佔用的埠號</p>
+<p>2.<span>http-server.py : </span>執行後會使用內建的 localhost 與 port 8444 伺服 content 子目錄中的 CMSiMDE 靜態網頁</p>
+<p>3.<span>cms.bat</span><span> :</span> 讓使用者執行動態網站用的批次檔案</p>
+<p>4.<span>acp.bat</span><span> :</span> 若使用者已經將倉儲設為 ssh 連線, 且提供遠端與近端的認證模式, 則可以在執行此批次指令之後加上提交字串, 即可執行 git add ., git commit -m "提交訊息", 以及 git push 等三個指令</p>
+<p></p>
 <p><span style="background-color: #ffff00;">以ssh對Github連線</span></p>
+<p><span style="background-color: #ffff00;"></span></p>
 <p><span style="background-color: #ffffff;">操作步驟 : </span></p>
-<p><span style="background-color: #ffffff;"><br/><span>2.輸入sh及ssh-keygen -t rsa -b 4096 -C "使學號"產生key，打上key的產生區域。</span><br/><span>3.利用 puttygen.exe 將上述建立的 Openssh keys 轉為 putty 可以辨識的格式。</span><br/><span>4.修改啟動的 start.bat 加入下列設定:</span><br/><span>       set GIT_HOME=%Disk%:\portablegit\bin\</span><br/><span>       set GIT_SSH=%Disk%:\putty\plink.exe</span><br/><span>修改完成後,重新啟動。</span><br/><span>5.將要使用 ssh 連線的倉儲 .git 中的 config 檔案中的 url 設定改為 ssh 連線格式:url = git@github.com:倉儲名稱/cad2019.git。</span><br/><span>6.開啟 putty.exe 建立一個 session 名稱為 github.com, 其中指定 Connection &gt; Proxy 與 Connection &gt; SSH &gt; Auth。</span><br/><span>7.將下列字串加入編輯器並存儲到y:\home\.ssh\config:</span><br/><span>Host github.com</span><br/><span>    User git</span><br/><span>    Port 22</span><br/><span>    Hostname github.com</span><br/><br/><span>    TCPKeepAlive yes</span><br/><span>    IdentitiesOnly yes</span><br/><span>8.將所建立的OpenSSH格式的public key內容,送到Github帳號SSH settings中。</span><br/><br/></span></p>
+<p><span style="background-color: #ffffff;">1.打開start_ipv6.bat<br/><span>2.輸入sh及ssh-keygen -t rsa -b 4096 -C "使學號"產生key，打上key的產生區域。</span><br/><span>3.利用 puttygen.exe 將上述建立的 Openssh keys 轉為 putty 可以辨識的格式。</span><br/><span>4.修改啟動的 start.bat 加入下列設定:</span><br/><span>       set GIT_HOME=%Disk%:\portablegit\bin\</span><br/><span>       set GIT_SSH=%Disk%:\putty\plink.exe</span><br/><span>修改完成後,重新啟動。</span><br/><span>5.將要使用 ssh 連線的倉儲 .git 中的 config 檔案中的 url 設定改為 ssh 連線格式:url = git@github.com:倉儲名稱/cad2019.git。</span><br/><span>6.開啟 putty.exe 建立一個 session 名稱為 github.com, 其中指定 Connection &gt; Proxy 與 Connection &gt; SSH &gt; Auth。</span><br/><span>7.將下列字串加入SciTE並存儲到\.ssh\config</span><br/><span>Host github.com</span><br/><span>    User git</span><br/><span>    Port 22</span><br/><span>    Hostname github.com</span><br/><br/><span>    TCPKeepAlive yes</span><br/><span>    IdentitiesOnly yes</span><br/><span>8.將所建立的OpenSSH格式的public key內容,送到Github帳號SSH settings中。</span><br/><br/></span></p>
 <p><span style="background-color: #ffffff;">遇到的問題 :</span></p>
-<p><span style="background-color: #ffffff;">1.putty顯示Network error: Connection refused</span></p>
+<p><span style="background-color: #ffffff;">1.putty顯示Network error: Connection refused(已解決，proxy設定錯誤)</span></p>
 <p><span style="background-color: #ffffff;"></span></p>
-<p><span style="background-color: #ccffff;">Week4</span></p>
+<h3><span style="background-color: #ccffff;">Week4</span></h3>
 <p><span style="background-color: #ffffff;"><span></span></span></p>
 <h2><span style="background-color: #ffff00;"><span style="background-color: #ffffff;">Week5~9</span></span></h2>
-<p><span style="background-color: #ccffff;">Week5</span></p>
+<h3><span style="background-color: #ccffff;">Week5</span></h3>
 <h2><span style="background-color: #ffff00;"><span style="background-color: #ffffff;">Week10~18</span></span></h2>
 <h1><span style="background-color: #ffff00;"><span style="background-color: #ffffff;">Experience</span></span></h1>
 <p><span style="background-color: #ccffff;">Week1</span></p>
+<p><span style="background-color: #ffffff;">開始了協同產品設計的第一週，說起來也慚愧，畢竟是之前太混什麼都沒學到才被當的，這學期會認真學習的。</span></p>
+<p><span style="background-color: #ffffff;">一開始一如往常地建立個人倉儲，這次不一樣的事是直接使用現成的子模組，比起以前方扁許多，然後薛席從英文單字了解其中的意義，像collaborative,product,design等等，最後就是編輯自己的leo editer，雖然有點落後進度不過會努力跟上的。</span></p>
+<p><span style="background-color: #ffffff;"></span></p>
 <p><span style="background-color: #ccffff;">Week2</span></p>
+<p><span style="background-color: #ffffff;">跟以前不一樣的是，這次分組不再是使用亂數分組，而是使用Ethercalc的協同同步方式，我覺得是很有效率的方法，不過也出現了些小問題。</span></p>
+<p><span style="background-color: #ffffff;">然後就是開始著手製作第一次的專題題目，但本身對coppeliasim不熟，所以還需要些時間摸索。</span></p>
+<p><span style="background-color: #ccffff;"></span></p>
 <p><span style="background-color: #ccffff;">Week3</span></p>
+<p><span style="background-color: #ffffff;">這週都在繪製零件跟操作coppeliasim，還有建立ssh對自己的github連線，我覺得要理解ssh蠻難的，不過還是有順利連線，上課中還有遇到個問題就是，分組網站不是建立在組長下面，所以就學習了如何使用git remote add並推送至各自的倉儲下，回家後就繼續測試並且製作下週報告要用的html與pdf。</span></p>
+<p><span style="background-color: #ccffff;"></span></p>
 <p><span style="background-color: #ccffff;">Week4</span></p>
 <p><span style="background-color: #ccffff;">Week5</span></p>
 <p><span style="background-color: #ccffff;">Week6</span></p>
