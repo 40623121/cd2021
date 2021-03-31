@@ -92,12 +92,11 @@
 <p></p>
 <p><span style="background-color: #ffff00;">update cmsimde</span></p>
 <p><span style="background-color: #ffff00;"></span></p>
-<p><span style="background-color: #ffff00;"><img alt="" height="91" src="/images/4.png" width="171"/></span></p>
+<p><img alt="" height="91" src="/images/4.png" width="171"/></p>
 <p>1.<span>init.py : </span>其中的 site_title, ip 與 port 可以讓使用者自行修改, site_title 是網站標題, ip 為動態網站啟動時所使用的網路位址, 可設為內部或外部 IPv4 (IPv6), port 則是動態網站啟動時所佔用的埠號</p>
 <p>2.<span>http-server.py : </span>執行後會使用內建的 localhost 與 port 8444 伺服 content 子目錄中的 CMSiMDE 靜態網頁</p>
 <p>3.<span>cms.bat</span><span> :</span> 讓使用者執行動態網站用的批次檔案</p>
 <p>4.<span>acp.bat</span><span> :</span> 如果已經將倉儲設為 ssh 連線, 且提供遠端與近端的認證模式, 就可以使用<strong>acp "字串"</strong>代替執行 git add ., git commit -m "提交訊息", 以及 git push 三個指令。</p>
-<p></p>
 <p></p>
 <p><span style="background-color: #ff0000;"><strong>遇到的問題</strong></span> : </p>
 <p>1.推送後遠端沒有推送成功，且gmail顯示Page build failure(已解決，cmsimde錯誤，在cmsimde目錄下輸入git checkout 自己的分支即可。)</p>
@@ -107,7 +106,7 @@
 <p></p>
 <p></p>
 <p><span style="background-color: #ffff00;">以ssh對Github連線</span></p>
-<p><span style="background-color: #ffff00;"></span></p>
+<p><span style="background-color: #ffff00;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/i31SIpifq2M" width="560"></iframe></span></p>
 <p><span style="background-color: #ffffff;">操作步驟 : </span></p>
 <p><span style="background-color: #ffffff;">1.打開start_ipv6.bat<br/><span>2.輸入sh及ssh-keygen -t rsa -b 4096 -C "使學號"產生key，打上key的產生區域。</span><br/><span>3.利用 puttygen.exe 將上述建立的 Openssh keys 轉為 putty 可以辨識的格式。</span><br/><span>4.修改啟動的 start.bat 加入下列設定:</span><br/><span>       set GIT_HOME=%Disk%:\portablegit\bin\</span><br/><span>       set GIT_SSH=%Disk%:\putty\plink.exe</span><br/><span>修改完成後,重新啟動。</span><br/><span>5.將要使用 ssh 連線的倉儲 .git 中的 config 檔案中的 url 設定改為 ssh 連線格式:url = git@github.com:倉儲名稱/cd2021.git。</span><br/><span>6.開啟 putty.exe 建立一個 session 名稱為 github.com, 其中指定 Connection &gt; Proxy 與 Connection &gt; SSH &gt; Auth。</span><br/><span>7.將下列字串加入SciTE並存儲到\.ssh\config</span><br/><span>Host github.com</span><br/><span>    User git</span><br/><span>    Port 22</span><br/><span>    Hostname github.com</span><br/><br/><span>    TCPKeepAlive yes</span><br/><span>    IdentitiesOnly yes</span><br/><span>8.將所建立的OpenSSH格式的public key內容,加進自己的Github帳號SSH settings中。</span><br/><br/></span></p>
 <p><span style="background-color: #ffffff;"><span style="background-color: #ff0000;">遇到的問題</span> :</span></p>
@@ -145,7 +144,14 @@
 <p><span style="background-color: #ffff00;"></span></p>
 <p><span style="background-color: #ffff00;">參考文獻</span></p>
 <p><span style="background-color: #ffff00;"></span><a href="/downloads/123.pdf">參考的網站與資料</a></p>
+<p><a href="/downloads/變速箱結構.pdf">參考資料</a>1</p>
+<p><a href="/downloads/演化中的變速箱 .pdf">參考資料</a>2</p>
+<p></p>
 <h3><span style="background-color: #ccffff;">Week6</span></h3>
+<p><span style="background-color: #ffff00;">繪製零件與組合圖</span></p>
+<p><img alt="" height="407" src="/images/螢幕擷取畫面 (2).png" width="476"/></p>
+<p></p>
+<p><span style="background-color: #ccffff;"></span></p>
 <h3><span style="background-color: #ccffff;">Week7</span></h3>
 <h3><span style="background-color: #ccffff;">Week8</span></h3>
 <h3><span style="background-color: #ccffff;">Week9</span></h3>
