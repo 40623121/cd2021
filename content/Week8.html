@@ -135,10 +135,18 @@ img.add_border {
         </header>
     <div id="tipue_search_content">Week7 << <a href='Week7.html'>Previous</a> <a href='Week9.html'>Next</a> >> Week9<br /><h1>Week8</h1>
 <p><span style="background-color: #ffff00;">製作路徑</span></p>
-<p><span style="background-color: #ffffff;">給予打檔桿路徑及dummy後，將關節設定成IK模式，並新增IK group和IK element。</span></p>
+<p><span style="background-color: #ffffff;">給予打檔桿路徑及dummy後，將關節設定成IK模式，並新增IK group和IK element，<span>程式碼是設定target跟隨path運動，運動速度為0.02。</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">function sysCall_threadmain()
+    dummy_handle = sim.getObjectHandle('Target')
+    path_handle = sim.getObjectHandle('Path')
+    print('start follow path')
+    sim.followPath(dummy_handle, path_handle, 1, 0, 0.02, 1)
+end</pre>
+<p><span style="background-color: #ffffff;"></span></p>
 <p><span style="background-color: #ffffff;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/kW8VxZJ2gpE" width="560"></iframe></span></p>
-<p><span style="background-color: #ccffff;"></span></p>
-<p><span style="background-color: #ccffff;"></span></p>
+<p><span style="background-color: #ffff00;"></span></p>
+<p><span style="background-color: #ffff00;">Inventor版</span></p>
+<p><span style="background-color: #ccffff;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/9G5RlL9KNNs" width="560"></iframe></span></p>
 <br />Week7 << <a href='Week7.html'>Previous</a> <a href='Week9.html'>Next</a> >> Week9</div>
         
     <!-- footer -->
