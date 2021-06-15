@@ -134,6 +134,53 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">Week15 << <a href='Week15.html'>Previous</a> <a href='Week17.html'>Next</a> >> Week17<br /><h1>Week16</h1>
+<p><span style="background-color: #ffff00;">MTB_robot 取放方塊流程</span></p>
+<h4>1. Onshape 零組件繪製</h4>
+<p>利用onshape軟體參考<span> </span><a href="https://github.com/mdecourse/cd2021/tree/main/downloads/stage3/MTB_robot">MTB_robot</a> 並繪製出一個組件相似的mtb_robot。</p>
+<p>圖檔連結 : </p>
+<p><a href="https://cad.onshape.com/documents/32cde3f6802dd89685eddff5/w/76107044dbe1d78bc3ff0d6b/e/1b23389c5ce43ea5d81a4977" rel="nofollow">https://cad.onshape.com/documents/32cde3f6802dd89685eddff5/w/76107044dbe1d78bc3ff0d6b/e/1b23389c5ce43ea5d81a4977</a></p>
+<p>操作影片 : </p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/_Yz75VYwrj8" width="560"></iframe></p>
+<h4></h4>
+<h4>2. 建立 CoppeliaSim 4.1.0 MTB robot 場景<span> </span></h4>
+<p><span>將組合好的MTB_模型以stl檔匯出之後匯入coppeliasim裡，並利用Leo Editer以require導入lua程式運作，分別控制各軸轉動。</span></p>
+<p><span>Google Drive:<br/><a href="https://drive.google.com/file/d/1Ppl7lwSd5PQIdc0V-gI1-slmAlB7n5l2/view?usp=sharing" rel="nofollow">https://drive.google.com/file/d/1Ppl7lwSd5PQIdc0V-gI1-slmAlB7n5l2/view?usp=sharing</a></span></p>
+<p><span>程式碼需要參考可以下載上面連結裡的lua檔案</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">if (auxiliaryData[1]==49) then --r right turn in degree
+                    -- if key 1 pressed axis1 angle adds 5 degrees
+                     rotation1 = rotation1 + 5*deg
+                     sim.setJointPosition(axis1, rotation1)
+                end -- if 1
+if (auxiliaryData[1]==50) then --l left turn in degree
+                    -- if key 2 pressed axis1 angle substract 5 degrees
+                     rotation1 = rotation1 - 5*deg
+                     sim.setJointPosition(axis1, rotation1)
+                end -- if 2
+if (auxiliaryData[1]==52) then --l left1 turn in degree
+                    -- if key 4 pressed axis1 angle substract 5 degrees
+                     rotation2 = rotation2 + 5*deg
+                     sim.setJointPosition(axis2, rotation2)
+                end -- if 4
+if (auxiliaryData[1]==53) then --r left2 turn in degree
+                    -- if key 5 pressed axis1 angle substract 5 degrees
+                     rotation2 = rotation2 - 5*deg
+                     sim.setJointPosition(axis2, rotation2)</pre>
+<p><span>上方程式碼是這個取分項目的重點，==後的數字是分別代表<a href="http://web.tnu.edu.tw/me/study/moodle/tutor/vb6/tutor/r03/index.htm">鍵盤的代碼</a>，我的是使用數字1、2來操控大軸，數字4、5來操控小軸。</span></p>
+<p><span>操作影片 : </span></p>
+<p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/XlxBFWSxQVY" width="560"></iframe></span></p>
+<h4>3. 手臂末端加入 components-gripper-suction pad 吸盤</h4>
+<p>接續上一個取分項目使用的MTB_robot，在繪製的吸盤零件末端加上一個force sensor並接上suction pad。</p>
+<p><span>Google Drive:</span><br/><a href="https://drive.google.com/file/d/1joVVPnSevFK1cdNXeTmb-A3iSABC1DS4/view?usp=sharing" rel="nofollow">https://drive.google.com/file/d/1joVVPnSevFK1cdNXeTmb-A3iSABC1DS4/view?usp=sharing</a></p>
+<p>程式碼一樣可以參考上方連結的lua檔，下方圖片是比較需要調整的參數，calibration是校正的參數，因為吸盤離太進或離太遠都會沒辦法讓dummy附著到cuboid上，所以要慢慢找適合自己組合圖的參數。</p>
+<p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">function sysCall_actuation() 
+    calibration = 0.002</pre>
+<p></p>
+<p></p>
+<p>操作影片 : </p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/aUYAM_VRdQU" width="560"></iframe></p>
+<p></p>
+<p></p>
 <br />Week15 << <a href='Week15.html'>Previous</a> <a href='Week17.html'>Next</a> >> Week17</div>
         
     <!-- footer -->
