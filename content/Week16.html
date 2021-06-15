@@ -176,12 +176,28 @@ if (auxiliaryData[1]==53) then --r left2 turn in degree
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">function sysCall_actuation() 
     calibration = 0.002</pre>
 <p></p>
+<p>然後要把吸盤的user parameters的active的value加上true，這樣吸盤靠近方塊時就能自動吸取了。</p>
 <p></p>
+<p><img alt="" height="322" src="./../images/w16.PNG" width="478"/></p>
 <p>操作影片 : </p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/aUYAM_VRdQU" width="560"></iframe></p>
+<h4>4. 逆向運動學函式<span> </span></h4>
+<p><span>根據 W15 線上課程內容之 Inverse Kinematics 方程式，用程式指定方塊取放兩個位置，分別是 (0.2, 0.7, 0.05) 與 (-0.3, -0.55, 0.05)，一樣可以接續之前的ttt檔做更改使用。</span></p>
+<p><span>Google Drive:<br/><a href="https://drive.google.com/file/d/1CEOEhOYhh9_C5nQH3Gul1xo2tbp8I7GZ/view?usp=sharing" rel="nofollow">https://drive.google.com/file/d/1CEOEhOYhh9_C5nQH3Gul1xo2tbp8I7GZ/view?usp=sharing</a></span></p>
+<p><span>要注意的是要將joint的扭矩設為2.5e+9，不然跑程式時會瘋狂亂轉。</span></p>
+<p><span><img alt="" height="464" src="./../images/w164.PNG" width="424"/></span></p>
+<p><span></span></p>
+<p><span>操作影片: </span></p>
+<p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/4K4t9rmwC0g" width="560"></iframe></span></p>
+<h4>5. Python remote API 逆向運動學函式<span> </span></h4>
+<p><span>這個取分項目是結合Task2所學的Python remote API 程式並以迴圈方式執行兩個指定位置之方塊取放。</span></p>
+<p><span>Google Drive:</span><br/><a href="https://drive.google.com/file/d/1hczjw-DDXETi1h2k4MT0J5OMmPVLLp3T/view?usp=sharing" rel="nofollow">https://drive.google.com/file/d/1hczjw-DDXETi1h2k4MT0J5OMmPVLLp3T/view?usp=sharing</a></p>
+<p>要注意的是要在資料夾下新增remoteApi.dll，sim.py,simConst.py,math.py這幾個檔案，這樣在Go的時候才能夠順利connect到remote api。</p>
+<p><img alt="" height="172" src="./../images/w165.PNG" width="202"/></p>
 <p></p>
-<p></p>
-<br />Week15 << <a href='Week15.html'>Previous</a> <a href='Week17.html'>Next</a> >> Week17</div>
+<p>操作影片 : </p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/I1acNveThp8" width="560"></iframe></p>
+<p>五個取分項目皆在期限內完成，自評完成度100%</p><br />Week15 << <a href='Week15.html'>Previous</a> <a href='Week17.html'>Next</a> >> Week17</div>
         
     <!-- footer -->
       <div class="container">
