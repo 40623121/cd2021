@@ -139,6 +139,24 @@ img.add_border {
 <p><span style="background-color: #ffff00;"><span style="background-color: #ffffff;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Wn2x2GW2m_I" width="560"></iframe></span></span></p>
 <h6><span style="background-color: #ffff00;">題目選定</span></h6>
 <p><span style="background-color: #ffff00;"><span style="background-color: #ffffff;">最後選定題目為<strong>停車塔</strong>，不延續各自組別stage-ag1,stage-ag2的題目。</span></span></p>
+<p><span style="background-color: #ffff00;">協同推送</span></p>
+<p><span style="background-color: #ffffff;">因為組別人數由4人增加到了8人，如果用一樣的方式慢慢一個一個git push 學號至每個人的倉儲要推送7次，所以就異想天開的想一次推完，後來經過幾次測試後也成功了，如下圖。</span></p>
+<p><span style="background-color: #ffffff;"><img alt="" height="720" src="./../images/all.PNG" width="562"/></span></p>
+<p><span style="background-color: #ffff00;"><span style="background-color: #ffffff;"></span></span>而原理其實也很簡單，就是將每個remote的內容合在同一個底下而已，這樣也不怕有漏推的問題了，要使用的話進去.git資料夾裡的config更改就好了。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">[remote "all"]
+    url = git@github.com:40823101/stage3-ag2.git
+    url = git@github.com:40823102/stage3-ag2.git
+    url = git@github.com:40823104/stage3-ag2.git
+    url = git@github.com:40823106/stage3-ag2.git
+    url = git@github.com:40823151/stage3-ag2.git
+    url = git@github.com:40871106/stage3-ag2.git
+    fetch = +refs/heads/*:refs/remotes/40823101/*
+    fetch = +refs/heads/*:refs/remotes/40823102/*
+    fetch = +refs/heads/*:refs/remotes/40823104/*
+    fetch = +refs/heads/*:refs/remotes/40823106/*
+    fetch = +refs/heads/*:refs/remotes/40871106/*
+    fetch = +refs/heads/*:refs/remotes/40823151/*
+</pre>
 <p><span style="background-color: #ffff00;"><span style="background-color: #ffffff;"></span></span></p>
 <br />Week10 << <a href='Week10.html'>Previous</a> <a href='Week12.html'>Next</a> >> Week12</div>
         
