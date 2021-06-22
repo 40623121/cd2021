@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='Weeks.html'>Weeks</a><ul class='dropdown'><li><a href='Week1.html'>Week1</a><li class='has-children'><a href='Week2~4.html'>Week2~4</a><ul class='dropdown'><li><a href='Week2.html'>Week2</a><li><a href='Week3.html'>Week3</a><li><a href='Week4.html'>Week4</a></li></ul><li class='has-children'><a href='Week5~9.html'>Week5~9</a><ul class='dropdown'><li><a href='Week5.html'>Week5</a><li><a href='Week6.html'>Week6</a><li><a href='Week7.html'>Week7</a><li><a href='Week8.html'>Week8</a><li><a href='Week9.html'>Week9</a></li></ul><li class='has-children'><a href='Week10~18.html'>Week10~18</a><ul class='dropdown'><li><a href='Week10.html'>Week10</a><li><a href='Week11.html'>Week11</a><li><a href='Week12.html'>Week12</a><li><a href='Week13.html'>Week13</a><li><a href='Week14.html'>Week14</a><li><a href='Week15.html'>Week15</a><li><a href='Week16.html'>Week16</a><li><a href='Week17.html'>Week17</a></li></li></ul></ul><li><a href='Experience.html'>Experience</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='Weeks.html'>Weeks</a><ul class='dropdown'><li><a href='Week1.html'>Week1</a><li class='has-children'><a href='Week2~4.html'>Week2~4</a><ul class='dropdown'><li><a href='Week2.html'>Week2</a><li><a href='Week3.html'>Week3</a><li><a href='Week4.html'>Week4</a></li></ul><li class='has-children'><a href='Week5~9.html'>Week5~9</a><ul class='dropdown'><li><a href='Week5.html'>Week5</a><li><a href='Week6.html'>Week6</a><li><a href='Week7.html'>Week7</a><li><a href='Week8.html'>Week8</a><li><a href='Week9.html'>Week9</a></li></ul><li class='has-children'><a href='Week10~18.html'>Week10~18</a><ul class='dropdown'><li><a href='Week10.html'>Week10</a><li><a href='Week11.html'>Week11</a><li><a href='Week12.html'>Week12</a><li><a href='Week13.html'>Week13</a><li><a href='Week14.html'>Week14</a><li><a href='Week15.html'>Week15</a><li><a href='Week16.html'>Week16</a><li><a href='Week17.html'>Week17</a><li><a href='Week18.html'>Week18</a></li></li></ul></ul><li><a href='Experience.html'>Experience</a></li>
                       </ul>
                 </nav>
               </div>
@@ -146,6 +146,9 @@ img.add_border {
 <p><span>將組合好的MTB_模型以stl檔匯出之後匯入coppeliasim裡，並利用Leo Editer以require導入lua程式運作，分別控制各軸轉動。</span></p>
 <p><span>Google Drive:<br/><a href="https://drive.google.com/file/d/1Ppl7lwSd5PQIdc0V-gI1-slmAlB7n5l2/view?usp=sharing" rel="nofollow">https://drive.google.com/file/d/1Ppl7lwSd5PQIdc0V-gI1-slmAlB7n5l2/view?usp=sharing</a></span></p>
 <p><span>程式碼需要參考可以下載上面連結裡的lua檔案</span></p>
+<p><span>STL轉檔方式 : </span></p>
+<p><span>將左下的Part零件全選後按右鍵匯出。</span></p>
+<p><span><img alt="" height="398" src="./../images/part.PNG" width="557"/></span></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">if (auxiliaryData[1]==49) then --r right turn in degree
                     -- if key 1 pressed axis1 angle adds 5 degrees
                      rotation1 = rotation1 + 5*deg
@@ -179,6 +182,8 @@ if (auxiliaryData[1]==53) then --r left2 turn in degree
 <p>然後要把吸盤的user parameters的active的value加上true，這樣吸盤靠近方塊時就能自動吸取了。</p>
 <p></p>
 <p><img alt="" height="322" src="./../images/w16.PNG" width="478"/></p>
+<p>樹狀圖 : </p>
+<p><img alt="" height="424" src="./../images/擷取.PNG" width="428"/></p>
 <p>操作影片 : </p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/aUYAM_VRdQU" width="560"></iframe></p>
 <h4>4. 逆向運動學函式<span> </span></h4>
@@ -186,6 +191,8 @@ if (auxiliaryData[1]==53) then --r left2 turn in degree
 <p><span>Google Drive:<br/><a href="https://drive.google.com/file/d/1CEOEhOYhh9_C5nQH3Gul1xo2tbp8I7GZ/view?usp=sharing" rel="nofollow">https://drive.google.com/file/d/1CEOEhOYhh9_C5nQH3Gul1xo2tbp8I7GZ/view?usp=sharing</a></span></p>
 <p><span>要注意的是要將joint的扭矩設為2.5e+9，不然跑程式時會瘋狂亂轉。</span></p>
 <p><span><img alt="" height="464" src="./../images/w164.PNG" width="424"/></span></p>
+<p><span>樹狀圖 : </span></p>
+<p><span><img alt="" height="481" src="./../images/luatree.PNG" width="427"/></span></p>
 <p><span></span></p>
 <p><span>操作影片: </span></p>
 <p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/4K4t9rmwC0g" width="560"></iframe></span></p>
